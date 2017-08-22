@@ -1,7 +1,9 @@
 # proof-of-concept-switch-ws-or-api
-An Eclipse workspace with a complete example to switch easily from WS to API java call and vice-versa
+A java Eclipse workspace with a complete example to switch easily from WS to API java call and vice-versa
 
-Ce projet est une démonstration d'une technique de switch très simple entre le mode d'appel par API et le mode d'appel WS. Il fournit un exmple de structure de projets volontairement éclatée bâtis autour de Maven.
+Ce projet est une démonstration d'une technique de switch très simple entre le mode d'appel par API et le mode d'appel WS avec la librairie apache-cxf **sans utiliser spring**. Il fournit un exemple de structure de projets volontairement éclatée bâtis autour de Maven.
+
+Notre équipe en a eu besoin récemment, je partage donc le résultat de mes recherches :
 
 ## Présentation du worskpace
 Le workspace est composé de 6 projects maven et correspond à 1 seule application web :
@@ -15,7 +17,7 @@ Le workspace est composé de 6 projects maven et correspond à 1 seule applicati
 |[webmodule](./webmoduled)   |Ce projet est le serveur web client. C'est lui qui référence services-api *OU* services-ws|
 |[webservices](./webservices) |Ce projet est le serveur de Web services. Il dépend de services-api.        |
 
-![Dependencies of projects](./resource/dependencies_project.png)
+![Dependencies of projects](./resources/dependencies_project.png)
 
 Le projet webmodule ne dépend QUE de services-api *OU* de services-ws, jamais les 2. Dans le cas où une partie est exposée et l'autre non, il faut éclater services-xxx en autant de projets que groupes de services.
 
@@ -33,7 +35,36 @@ La bascule doit être aussi simple que de modifier une ligne dans un fichier pom
 ````
 La bascule se fait simplement en commentant service-ws et en décommentant services-api.
 
-## Principe
+Nous préférons le code ouvert, 'sans magie à la spring'. Le projet fait usage de CXF exclusivement par programmation.
 
+Enfin, nous préférons voir nos développeurs travailler en mode java API en développement, puis d'activer le mode WS pour les tests d'intégration. 
+
+## Principe
+A partir du projet 'webmodule', un appel à un service (ou webservice) java se fait comme suit :
+
+```java
+		Student student = new Student();
+		student.setName("Hugo");
+		long start = System.nanoTime();
+		student = Coordination.students.changeName(student);
+		out.print(student.getName());
+		out.print("<br />");
+		long time = System.nanoTime() - start;
+		out.print(time/1000000.0 + " ms");
+		
+		try {
+			Coordination.students.changeNameWithException(student);
+			out.print("<br /> NO EXCEPTION");
+		} catch (Throwable t) {
+			out.print("<br />Exception : " + t.getMessage();
+		}
+```
+
+Les exceptions remontées doivent se comporter exactement de la même façon en mode java API ou WS. La seule différence est qu'une RuntimeException  non déclarée dans l'interface du projet 'common' est encapsulée dans une RuntimeException 'SOAPFault' quand le mode WS est activée.
 
 ## Mise en oeuvre
+![Dependencies of projects](./resources/class_hierarchy.png)
+
+Le découpage en module MAVEN décrit plus haut permet de tirer les dépendances nécessaires sans chevauchement. Attention toutefois, 'ServiceAPI' et 'ServiceWS' sans dans des modules maven différents, mais ne doivent jamais être déclaré ensemble dans un pom.xml. En effet, ces 2 modules ont des noms de packages et de classe identiques.  
+
+N'hésitez pas à adapter ce code à vos besoin, si tant est que vous en ayez besoin.

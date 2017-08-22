@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_RH-9MIc4Eeehod6kuHMF6Q" name="SwitchAPIWS">
-  <packagedElement xmi:type="uml:Package" xmi:id="_gQtP0Ic4Eeehod6kuHMF6Q" name="services"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_gQtP0Ic4Eeehod6kuHMF6Q" name="candidateclasses">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_9UoRAIdDEeeTvvZKTlAXPA" name="ServiceInterface">
+      <ownedOperation xmi:id="_CSt7oIdEEeeTvvZKTlAXPA" name="serviceMethod">
+        <ownedComment xmi:id="_FJbDAIdEEeeTvvZKTlAXPA" annotatedElement="_CSt7oIdEEeeTvvZKTlAXPA">
+          <body xsi:nil="true"/>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JPNzsIdEEeeTvvZKTlAXPA" name="ServiceAPI">
+      <interfaceRealization xmi:id="_0P99IIdEEeeTvvZKTlAXPA" client="_JPNzsIdEEeeTvvZKTlAXPA" supplier="_9UoRAIdDEeeTvvZKTlAXPA" contract="_9UoRAIdDEeeTvvZKTlAXPA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_J6MDUIdEEeeTvvZKTlAXPA" name="ServiceWS">
+      <interfaceRealization xmi:id="_0m9g0IdEEeeTvvZKTlAXPA" client="_J6MDUIdEEeeTvvZKTlAXPA" supplier="_9UoRAIdDEeeTvvZKTlAXPA" contract="_9UoRAIdDEeeTvvZKTlAXPA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KJ3eEIdEEeeTvvZKTlAXPA" name="Client"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_1al9MIdEEeeTvvZKTlAXPA" memberEnd="_1al9MYdEEeeTvvZKTlAXPA _1aoZcIdEEeeTvvZKTlAXPA" navigableOwnedEnd="_1aoZcIdEEeeTvvZKTlAXPA">
+      <ownedEnd xmi:id="_1al9MYdEEeeTvvZKTlAXPA" name="serviceWSs" type="_5vvjEIdFEeeTvvZKTlAXPA" association="_1al9MIdEEeeTvvZKTlAXPA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1anyYIdEEeeTvvZKTlAXPA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1anyYYdEEeeTvvZKTlAXPA" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_1aoZcIdEEeeTvvZKTlAXPA" name="serviceAPIs" type="_JPNzsIdEEeeTvvZKTlAXPA" aggregation="composite" association="_1al9MIdEEeeTvvZKTlAXPA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1aoZcYdEEeeTvvZKTlAXPA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1aoZcodEEeeTvvZKTlAXPA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_8JWUMIdEEeeTvvZKTlAXPA" name="VO"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_-HI2kIdEEeeTvvZKTlAXPA" client="_9UoRAIdDEeeTvvZKTlAXPA" supplier="_8JWUMIdEEeeTvvZKTlAXPA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_GY0_8IdFEeeTvvZKTlAXPA" name="clientsToServiceInterfaces" memberEnd="_GY0_8YdFEeeTvvZKTlAXPA _GY1nAodFEeeTvvZKTlAXPA" navigableOwnedEnd="_GY1nAodFEeeTvvZKTlAXPA">
+      <ownedEnd xmi:id="_GY0_8YdFEeeTvvZKTlAXPA" name="clients" type="_KJ3eEIdEEeeTvvZKTlAXPA" association="_GY0_8IdFEeeTvvZKTlAXPA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GY1nAIdFEeeTvvZKTlAXPA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GY1nAYdFEeeTvvZKTlAXPA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_GY1nAodFEeeTvvZKTlAXPA" name="serviceInterfaces" type="_9UoRAIdDEeeTvvZKTlAXPA" aggregation="shared" association="_GY0_8IdFEeeTvvZKTlAXPA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GY1nA4dFEeeTvvZKTlAXPA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GY2OEIdFEeeTvvZKTlAXPA" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5vvjEIdFEeeTvvZKTlAXPA" name="ServiceWSProvider">
+      <interfaceRealization xmi:id="_MNwWgIdGEeeTvvZKTlAXPA" client="_5vvjEIdFEeeTvvZKTlAXPA" supplier="_9UoRAIdDEeeTvvZKTlAXPA" contract="_9UoRAIdDEeeTvvZKTlAXPA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_BLF6UIdGEeeTvvZKTlAXPA" name="Accès par SOAP" client="_J6MDUIdEEeeTvvZKTlAXPA" supplier="_5vvjEIdFEeeTvvZKTlAXPA"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_x0kIIIc4Eeehod6kuHMF6Q" name="parentpom"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_yFRdoIc4Eeehod6kuHMF6Q" name="common"/>
   <packagedElement xmi:type="uml:Component" xmi:id="_y1BfkIc4Eeehod6kuHMF6Q" name="services-api"/>
