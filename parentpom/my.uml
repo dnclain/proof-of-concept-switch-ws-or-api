@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_RH-9MIc4Eeehod6kuHMF6Q" name="NewModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="_gQtP0Ic4Eeehod6kuHMF6Q" name="Composant"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_x0kIIIc4Eeehod6kuHMF6Q" name="parentpom"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_yFRdoIc4Eeehod6kuHMF6Q" name="common"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_y1BfkIc4Eeehod6kuHMF6Q" name="services-api"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_zCD2AIc4Eeehod6kuHMF6Q" name="webmodule - (serveur WEB client)"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_-xB-kIc4Eeehod6kuHMF6Q" name="services-ws"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_PI490Ic5Eeehod6kuHMF6Q" name="webservices - (serveur de web service)"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_RiWIgIc5Eeehod6kuHMF6Q" client="_yFRdoIc4Eeehod6kuHMF6Q" supplier="_x0kIIIc4Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_R7eaMIc5Eeehod6kuHMF6Q" client="_y1BfkIc4Eeehod6kuHMF6Q" supplier="_x0kIIIc4Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_SUuAoIc5Eeehod6kuHMF6Q" client="_-xB-kIc4Eeehod6kuHMF6Q" supplier="_x0kIIIc4Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_StwywIc5Eeehod6kuHMF6Q" client="_PI490Ic5Eeehod6kuHMF6Q" supplier="_x0kIIIc4Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_TCNYwIc5Eeehod6kuHMF6Q" client="_zCD2AIc4Eeehod6kuHMF6Q" supplier="_x0kIIIc4Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_heHosIc5Eeehod6kuHMF6Q" client="_y1BfkIc4Eeehod6kuHMF6Q" supplier="_yFRdoIc4Eeehod6kuHMF6Q">
+    <name xsi:nil="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_wbBF0Ic5Eeehod6kuHMF6Q" client="_-xB-kIc4Eeehod6kuHMF6Q" supplier="_yFRdoIc4Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="__FNpYIc5Eeehod6kuHMF6Q" name="CXF"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_BF5uwIc6Eeehod6kuHMF6Q" client="_PI490Ic5Eeehod6kuHMF6Q" supplier="__FNpYIc5Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_BYzcoIc6Eeehod6kuHMF6Q" client="_-xB-kIc4Eeehod6kuHMF6Q" supplier="__FNpYIc5Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_kJRK4Ic6Eeehod6kuHMF6Q" name="accès web service" client="_zCD2AIc4Eeehod6kuHMF6Q" supplier="_y1BfkIc4Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_kpAa4Ic6Eeehod6kuHMF6Q" name="ou accès API" client="_zCD2AIc4Eeehod6kuHMF6Q" supplier="_-xB-kIc4Eeehod6kuHMF6Q"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_t5HpcIc8EeeTvvZKTlAXPA" client="_PI490Ic5Eeehod6kuHMF6Q" supplier="_y1BfkIc4Eeehod6kuHMF6Q">
+    <name xsi:nil="true"/>
+  </packagedElement>
+</uml:Model>

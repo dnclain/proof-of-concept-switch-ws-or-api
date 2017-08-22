@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints
+  xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+  version="2.0">
+  <!-- JAXB initialization file. Useless for CXF. -->
+  <endpoint
+      name="ChangeStudent"
+      implementation="webservicesimpl.ChangeStudentDetailsImpl"
+      url-pattern="/ChangeStudent"/>
+</endpoints>
