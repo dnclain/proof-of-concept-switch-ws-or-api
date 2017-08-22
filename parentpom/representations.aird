@@ -518,24 +518,27 @@
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_fV3_QIc4Eeehod6kuHMF6Q" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_fV3_QYc4Eeehod6kuHMF6Q" type="Sirius" element="_fV2xIYc4Eeehod6kuHMF6Q" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_gQ6EIIc4Eeehod6kuHMF6Q" type="2001" element="_gQud8Ic4Eeehod6kuHMF6Q">
-          <children xmi:type="notation:Node" xmi:id="_gQ6rMIc4Eeehod6kuHMF6Q" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_gQ6rMYc4Eeehod6kuHMF6Q" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_BheW0IdCEeeTvvZKTlAXPA" type="2001" element="_BhVM4IdCEeeTvvZKTlAXPA">
+          <children xmi:type="notation:Node" xmi:id="_Bhe94IdCEeeTvvZKTlAXPA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_Bhe94YdCEeeTvvZKTlAXPA" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_gRy08Ic4Eeehod6kuHMF6Q" type="3005" element="_gQud8Yc4Eeehod6kuHMF6Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_gRy08Yc4Eeehod6kuHMF6Q" fontName=".SF NS Text"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gRy08oc4Eeehod6kuHMF6Q"/>
+          <children xmi:type="notation:Node" xmi:id="_BhngwIdCEeeTvvZKTlAXPA" type="3005" element="_BhVM4YdCEeeTvvZKTlAXPA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_BhngwYdCEeeTvvZKTlAXPA" fontName=".SF NS Text"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhngwodCEeeTvvZKTlAXPA"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_gQ6EIYc4Eeehod6kuHMF6Q" fontName=".SF NS Text" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gQ6EIoc4Eeehod6kuHMF6Q" x="249" y="212" width="80" height="50"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_BheW0YdCEeeTvvZKTlAXPA" fontName=".SF NS Text" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BheW0odCEeeTvvZKTlAXPA" x="52" y="76" width="80" height="50"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_fV3_Qoc4Eeehod6kuHMF6Q"/>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_gQud8Ic4Eeehod6kuHMF6Q" name="Composant" width="8" height="8" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BhVM4IdCEeeTvvZKTlAXPA" name="services" width="8" height="8" resizeKind="NSEW">
       <target xmi:type="uml:Package" href="my.uml#_gQtP0Ic4Eeehod6kuHMF6Q"/>
       <semanticElements xmi:type="uml:Package" href="my.uml#_gQtP0Ic4Eeehod6kuHMF6Q"/>
-      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_gQud8Yc4Eeehod6kuHMF6Q" showIcon="false" labelPosition="node" workspacePath="/org.obeonetwork.dsl.uml2.design/images/package.svg">
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_BhVM4YdCEeeTvvZKTlAXPA" showIcon="false" labelPosition="node" workspacePath="/org.obeonetwork.dsl.uml2.design/images/package.svg">
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Capture']/@ownedRepresentations[name='Package%20Hierarchy']/@defaultLayer/@nodeMappings[name='PH_Package']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Capture']/@ownedRepresentations[name='Package%20Hierarchy']/@defaultLayer/@nodeMappings[name='PH_Package']"/>
