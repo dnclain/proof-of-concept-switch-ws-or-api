@@ -67,4 +67,4 @@ Les exceptions remontées doivent se comporter exactement de la même façon en 
 
 Le découpage en module MAVEN décrit plus haut permet de tirer les dépendances nécessaires sans chevauchement. Attention toutefois, 'ServiceAPI' et 'ServiceWS' sont dans des modules maven différents, mais ne doivent jamais être déclaré ensemble dans un pom.xml. En effet, ces 2 modules ont des noms de packages et de classe identiques.  
 
-N'hésitez pas à adapter ce code à vos besoin, si tant est que vous en ayez besoin.
+N'hésitez pas à adapter ce code, si tant est que vous en ayez besoin.
