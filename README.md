@@ -25,6 +25,7 @@ Le projet [webmodule](./webmodule) n'a besoin de dépendre QUE de [services-api]
 Un appel WS est typiquement environ 1000 fois plus lent _en temps d'accès_ qu'un appel par API java. C'est donc principalement la performance qui nous pousse à chercher à basculer de façon _transparente_ d'un protocole à l'autre. 
 
 La bascule doit être aussi simple que de modifier une ligne dans un fichier pom.xml :
+
 ```xml
 		<dependency>
 			<groupId>dcn.ovh</groupId>
@@ -33,6 +34,7 @@ La bascule doit être aussi simple que de modifier une ligne dans un fichier pom
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 ````
+
 La bascule se fait simplement en commentant service-ws et en décommentant services-api. (en pratique, il faut aussi modifier le web.xml et/ou le context.xml du serveur web pour les datasources par exemple.)
 
 En raison des difficultés que notre équipe a eu avec l'IoC, nous préférons désormais le code le plus ouvert possible (<> du code boite noire), 'sans magie à la spring'. Le projet fait usage de CXF exclusivement par programmation par exemple.
