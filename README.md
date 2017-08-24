@@ -33,7 +33,7 @@ La bascule doit être aussi simple que de modifier une ligne dans un fichier pom
 			<artifactId>services-ws</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-````
+```
 
 La bascule se fait simplement en commentant service-ws et en décommentant services-api. (en pratique, il faut aussi modifier le web.xml et/ou le context.xml du serveur web pour les datasources par exemple.)
 
